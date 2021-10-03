@@ -77,3 +77,15 @@ lvim.autocommands.custom_groups = {
 lvim.plugins = {
     {"farmergreg/vim-lastplace"},
 }
+
+-- custom formatter
+lvim.lang.python.formatters = {
+    {
+        exe = "black",
+    }
+}
+lvim.lang.cpp.formatters = {
+    {
+        exe = "clang_format",
+    }
+}
