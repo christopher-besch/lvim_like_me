@@ -78,7 +78,7 @@ lvim.plugins = {
     {"farmergreg/vim-lastplace"},
 }
 
--- custom formatter
+-- custom formatters
 lvim.lang.python.formatters = {
     {
         exe = "black",
