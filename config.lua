@@ -73,7 +73,15 @@ lvim.keys.normal_mode["<down>"] = "<nop>"
 -- lvim.keys.insert_mode["<Tab>"] = "v:lua.tab_complete('F')"
 -- lvim.keys.insert_mode["<S-Tab>"] = "v:lua.tab_complete('B')"
 
+-- handle spell checking
 lvim.builtin.which_key.mappings["r"] = { "<cmd>set invspell<CR>", "Toggle Spell" }
+lvim.builtin.which_key.mappings["R"] = { "<cmd>set spelllang=de<CR>", "German Spell" }
+-- you might have to download from https://ftp.nluug.nl/pub/vim/runtime/spell/de.utf-8.spl
+
+-- handle stupid german umlauts
+-- todo: partly broken
+lvim.builtin.which_key.vmappings["u"] = { "<cmd>'<,'>s/ae/ä/g<CR><cmd>'<,'>s/oe/ö/g<CR><cmd>'<,'>s/ue/ü/g<CR><cmd>'<,'>s/ss/ß/g<CR>", "Replace Umlauts" }
+lvim.builtin.which_key.mappings["u"] = { "/ae\\|oe\\|ue\\|ss<CR>", "Find Umlauts" }
 
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.dashboard.active = true
