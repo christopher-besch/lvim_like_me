@@ -54,6 +54,25 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<up>"] = "<nop>"
 lvim.keys.normal_mode["<down>"] = "<nop>"
 
+-- todo: auto tab completion doesn't work
+-- _G.tab_complete = function(dir)
+--     if vim.fn.pumvisible() == 1 then
+--         if (dir == "F") then
+--             return term_codes '<C-n>'
+--         elseif (dir == "B") then
+--             return term_codes '<C-p>'
+--         end
+--     else
+--         if (dir == "F") then
+--             return term_codes '<Tab>'
+--         elseif (dir == "B") then
+--             return term_codes '<S-Tab>'
+--         end
+--     end
+-- end
+-- lvim.keys.insert_mode["<Tab>"] = "v:lua.tab_complete('F')"
+-- lvim.keys.insert_mode["<S-Tab>"] = "v:lua.tab_complete('B')"
+
 lvim.builtin.which_key.mappings["r"] = { "<cmd>set invspell<CR>", "Toggle Spell" }
 
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
