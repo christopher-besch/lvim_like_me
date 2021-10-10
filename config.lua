@@ -80,7 +80,10 @@ lvim.builtin.which_key.mappings["R"] = { "<cmd>set spelllang=de<CR>", "German Sp
 
 -- handle stupid german umlauts
 -- todo: partly broken
-lvim.builtin.which_key.vmappings["u"] = { "<cmd>'<,'>s/ae/ä/g<CR><cmd>'<,'>s/oe/ö/g<CR><cmd>'<,'>s/ue/ü/g<CR><cmd>'<,'>s/ss/ß/g<CR>", "Replace Umlauts" }
+lvim.builtin.which_key.vmappings["a"] = { "<cmd>'<,'>s/ae/ä/g<CR>", "Replace ae" }
+lvim.builtin.which_key.vmappings["o"] = { "<cmd>'<,'>s/oe/ö/g<CR>", "Replace oe" }
+lvim.builtin.which_key.vmappings["u"] = { "<cmd>'<,'>s/ue/ü/g<CR>", "Replace ue" }
+lvim.builtin.which_key.vmappings["s"] = { "<cmd>'<,'>s/ss/ß/g<CR>", "Replace ss" }
 lvim.builtin.which_key.mappings["u"] = { "/ae\\|oe\\|ue\\|ss<CR>", "Find Umlauts" }
 
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -108,7 +111,7 @@ lvim.plugins = {
 -- custom formatters
 lvim.lang.python.formatters = {
     {
-        exe = "black",
+        exe = "autopep8",
     }
 }
 lvim.lang.cpp.formatters = {
