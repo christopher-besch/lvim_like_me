@@ -97,11 +97,11 @@ lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
-lvim.autocommands.custom_groups = {
-    -- set sensible c++ comments
-    { "BufEnter", "*.cpp,*.h,*.hpp,*.cxx", ':lua vim.api.nvim_buf_set_option(0, "commentstring", "// %s")' },
-    { "BufFilePost", "*.cpp,*.h,*.hpp,*.cxx", ':lua vim.api.nvim_buf_set_option(0, "commentstring", "// %s")' },
-}
+-- lvim.autocommands.custom_groups = {
+--     -- set sensible c++ comments
+--     { "BufEnter", "*.cpp,*.h,*.hpp,*.cxx", ':lua vim.api.nvim_buf_set_option(0, "commentstring", "// %s")' },
+--     { "BufFilePost", "*.cpp,*.h,*.hpp,*.cxx", ':lua vim.api.nvim_buf_set_option(0, "commentstring", "// %s")' },
+-- }
 
 -- plugins
 lvim.plugins = {
@@ -112,6 +112,12 @@ lvim.plugins = {
 lvim.lang.python.formatters = {
     {
         exe = "autopep8",
+    }
+}
+-- disable the stupidity of the jdtls formatter adding \n\r everywhere
+lvim.lang.java.formatters = {
+    {
+        exe = "clang_format",
     }
 }
 lvim.lang.cpp.formatters = {
