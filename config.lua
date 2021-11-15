@@ -108,20 +108,8 @@ lvim.plugins = {
     {"farmergreg/vim-lastplace"},
 }
 
--- custom formatters
-lvim.lang.python.formatters = {
-    {
-        exe = "autopep8",
-    }
-}
--- disable the stupidity of the jdtls formatter adding \n\r everywhere
-lvim.lang.java.formatters = {
-    {
-        exe = "clang_format",
-    }
-}
-lvim.lang.cpp.formatters = {
-    {
-        exe = "clang_format",
-    }
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+    { exe = "autopep8" },
+    { exe = "clang_format" },
 }
