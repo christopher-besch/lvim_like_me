@@ -76,7 +76,7 @@ lvim.keys.normal_mode["<down>"] = "<nop>"
 -- handle spell checking
 lvim.builtin.which_key.mappings["r"] = { "<cmd>set invspell<CR>", "Toggle Spell" }
 lvim.builtin.which_key.mappings["R"] = { "<cmd>set spelllang=de<CR>", "German Spell" }
--- you might have to download from https://ftp.nluug.nl/pub/vim/runtime/spell/de.utf-8.spl
+-- you might have to download from https://ftp.nluug.nl/pub/vim/runtime/spell/de.utf-8.spl into ~/.local/share/nvim/site/spell
 
 -- handle stupid german umlauts
 -- todo: partly broken
