@@ -53,6 +53,8 @@ lvim.leader = "space"
 -- disable scrolling
 lvim.keys.normal_mode["<up>"] = "<nop>"
 lvim.keys.normal_mode["<down>"] = "<nop>"
+lvim.keys.insert_mode["<up>"] = "<nop>"
+lvim.keys.insert_mode["<down>"] = "<nop>"
 
 -- todo: auto tab completion doesn't work
 -- _G.tab_complete = function(dir)
