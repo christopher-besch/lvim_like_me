@@ -88,6 +88,16 @@ lvim.builtin.which_key.vmappings["u"] = { "<cmd>'<,'>s/ue/ü/g<CR>", "Replace ue
 lvim.builtin.which_key.vmappings["s"] = { "<cmd>'<,'>s/ss/ß/g<CR>", "Replace ss" }
 lvim.builtin.which_key.mappings["u"] = { "/ae\\|oe\\|ue\\|ss<CR>", "Find Umlauts" }
 
+-- sorting
+lvim.builtin.which_key.vmappings["r"] = {
+    name = "Sorting",
+    s = { ":'<, '>sort<CR>", ":sort" },
+    d = { ":'<, '>sort!<CR>", ":sort!" },
+    n = { ":'<, '>sort n<CR>", ":sort n" },
+    f = { ":'<, '>sort! n<CR>", ":sort! n" },
+    u = { ":'<, '>sort u<CR>", ":sort u" },
+}
+
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
