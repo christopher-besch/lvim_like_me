@@ -120,9 +120,9 @@ lvim.plugins = {
     {"farmergreg/vim-lastplace"},
 }
 
-local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup {
-    { exe = "autopep8" },
-    { exe = "clang_format" },
-    -- { exe = "latexindent" },
-}
+-- local formatters = require "lvim.lsp.null-ls.formatters"
+-- formatters.setup {
+--     { exe = "autopep8" },
+--     { exe = "clang_format" },
+--     -- { exe = "latexindent" },
+-- }
